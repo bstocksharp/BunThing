@@ -12,7 +12,7 @@ export const createAppTheme = (isDark: boolean) =>
       },
       background: {
         default: isDark ? "#283618" : "#fffce8",
-        paper: isDark ? "#283618" : "#ecf39e",
+        paper: isDark ? "#3a4a2b" : "#f5eecb",
       },
       success: {
         main: "#6ba547",
@@ -23,7 +23,6 @@ export const createAppTheme = (isDark: boolean) =>
         styleOverrides: {
           root: {
             backgroundColor: isDark ? "#283618" : "#283618",
-            backgroundImage: "none", // disables the auto darkening on dark mode
           },
         },
       },

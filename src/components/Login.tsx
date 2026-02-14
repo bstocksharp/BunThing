@@ -1,13 +1,6 @@
 import { useState } from "react";
-import {
-  Box,
-  Container,
-  TextField,
-  Button,
-  Card,
-  Typography,
-  Alert,
-} from "@mui/material";
+import { Box, Container, TextField, Button, Card, Typography, Alert, InputAdornment, IconButton } from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { useAuth } from "@/context/AuthContext";
 
 interface LoginProps {}
@@ -17,10 +10,11 @@ export function Login({}: LoginProps) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isLogin, setIsLogin] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
 
   const { login } = useAuth();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent) => {
     e.preventDefault();
     setError("");
 
@@ -71,11 +65,26 @@ export function Login({}: LoginProps) {
             <TextField
               fullWidth
               label="Password"
-              type="password"
+              type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               margin="normal"
               required
+              slotProps={{
+                input: {
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label={showPassword ? "Hide password" : "Show password"}
+                        onClick={() => setShowPassword((show) => !show)}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                },
+              }}
             />
 
             <Button fullWidth variant="contained" type="submit" sx={{ mt: 3 }}>
@@ -83,12 +92,7 @@ export function Login({}: LoginProps) {
             </Button>
           </form>
 
-          <Button
-            fullWidth
-            variant="text"
-            sx={{ mt: 2 }}
-            onClick={() => setIsLogin(!isLogin)}
-          >
+          <Button fullWidth variant="text" sx={{ mt: 2 }} onClick={() => setIsLogin(!isLogin)}>
             {isLogin ? "Need an account? Register" : "Have an account? Login"}
           </Button>
         </Card>
