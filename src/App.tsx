@@ -1,9 +1,10 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, Link } from "react-router-dom";
 import { Box, AppBar, Toolbar, Typography, Button } from "@mui/material";
 import { useTheme } from "@/context/ThemeContext";
 import { useAuth } from "@/context/AuthContext";
 import { Login } from "@/components/Login";
 import { WeatherDisplay } from "@/components/WeatherDisplay";
+import { DarkModes } from "./components/DarkModes";
 
 export function App() {
   const { isDark, toggleDarkMode } = useTheme();
@@ -26,9 +27,18 @@ export function App() {
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             Bun + React
           </Typography>
+
+          {/* New link to the testing ground! */}
+          {token && (
+            <Button color="inherit" component={Link} to="/cursed-modes" sx={{ mr: 2 }}>
+              🧪 Lab
+            </Button>
+          )}
+
           <Button color="inherit" onClick={toggleDarkMode}>
             {isDark ? "☀️" : "🌙"}
           </Button>
+
           {token && (
             <Button color="inherit" onClick={logout}>
               Logout
@@ -52,6 +62,7 @@ export function App() {
           }
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/cursed-modes" element={token ? <DarkModes /> : <Navigate to="/login" />} />
       </Routes>
     </Box>
   );
