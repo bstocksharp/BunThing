@@ -1,10 +1,10 @@
 import { Routes, Route, Navigate, Link } from "react-router-dom";
 import { Box, AppBar, Toolbar, Typography, Button } from "@mui/material";
-import { useTheme } from "@/context/ThemeContext";
 import { useAuth } from "@/context/AuthContext";
 import { Login } from "@/components/Login";
 import { DarkModesControl } from "@/components/DarkModeControls";
 import { Home } from "@/components/Home";
+import { TextTest } from "@/components/FightForLetters/TextTest";
 
 export function App() {
   const { token, loading, logout } = useAuth();
@@ -29,6 +29,9 @@ export function App() {
             Bun
           </Typography>
 
+          <Button color="inherit" component={Link} to="/textTest">
+            TextTest
+          </Button>
           <DarkModesControl />
 
           {token && (
@@ -42,6 +45,7 @@ export function App() {
       <Routes>
         <Route path="/" element={token ? <Home /> : <Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/textTest" element={<TextTest />} />
       </Routes>
     </Box>
   );

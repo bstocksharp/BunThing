@@ -13,11 +13,7 @@ import {
   Chip,
   Button,
 } from "@mui/material";
-import {
-  getBackgroundGradient,
-  getEffectType,
-  getWeatherConfig,
-} from "./WeatherConfig";
+import { getBackgroundGradient, getEffectType, getWeatherConfig } from "./WeatherConfig";
 import Rain from "./Rain";
 import Lightning from "./Lightning";
 import Snow from "./Snow";
@@ -33,13 +29,7 @@ type WeatherCategory =
   | "snow_showers"
   | "thunderstorm";
 
-type TimePeriod =
-  | "morning"
-  | "late_morning"
-  | "afternoon"
-  | "sunset"
-  | "dusk"
-  | "night";
+type TimePeriod = "morning" | "late_morning" | "afternoon" | "sunset" | "dusk" | "night";
 
 const WEATHER_CATEGORIES: WeatherCategory[] = [
   "clear",
@@ -53,14 +43,7 @@ const WEATHER_CATEGORIES: WeatherCategory[] = [
   "thunderstorm",
 ];
 
-const TIME_PERIODS: TimePeriod[] = [
-  "morning",
-  "late_morning",
-  "afternoon",
-  "sunset",
-  "dusk",
-  "night",
-];
+const TIME_PERIODS: TimePeriod[] = ["morning", "late_morning", "afternoon", "sunset", "dusk", "night"];
 
 const CATEGORY_TO_CODE: Record<WeatherCategory, number> = {
   clear: 0,
@@ -152,11 +135,7 @@ export function WeatherDebugger() {
         {/* Weather Category */}
         <FormControl fullWidth sx={{ mb: 2 }}>
           <FormLabel>Weather Category</FormLabel>
-          <Select
-            value={category}
-            onChange={(e) => setCategory(e.target.value as WeatherCategory)}
-            size="small"
-          >
+          <Select value={category} onChange={(e) => setCategory(e.target.value as WeatherCategory)} size="small">
             {WEATHER_CATEGORIES.map((cat) => (
               <MenuItem key={cat} value={cat}>
                 {cat}
@@ -168,11 +147,7 @@ export function WeatherDebugger() {
         {/* Time Period */}
         <FormControl fullWidth sx={{ mb: 2 }}>
           <FormLabel>Time Period</FormLabel>
-          <Select
-            value={period}
-            onChange={(e) => handlePeriodChange(e.target.value as TimePeriod)}
-            size="small"
-          >
+          <Select value={period} onChange={(e) => handlePeriodChange(e.target.value as TimePeriod)} size="small">
             {TIME_PERIODS.map((p) => (
               <MenuItem key={p} value={p}>
                 {p}
@@ -221,20 +196,11 @@ export function WeatherDebugger() {
             color={config.showLightning ? "warning" : "default"}
           />
           <Chip label={`Speed: ${config.rainSpeed.toFixed(1)}`} size="small" />
-          <Chip
-            label={`Density: ${config.rainDensity.toFixed(1)}`}
-            size="small"
-          />
+          <Chip label={`Density: ${config.rainDensity.toFixed(1)}`} size="small" />
         </Stack>
 
         {/* Full Config */}
-        <Button
-          onClick={() => setShowConfig(!showConfig)}
-          fullWidth
-          size="small"
-          variant="outlined"
-          sx={{ mb: 2 }}
-        >
+        <Button onClick={() => setShowConfig(!showConfig)} fullWidth size="small" variant="outlined" sx={{ mb: 2 }}>
           {showConfig ? "Hide" : "Show"} Full Config
         </Button>
 
@@ -258,7 +224,7 @@ export function WeatherDebugger() {
         <Box
           sx={{
             mt: 3,
-            height: 150,
+            height: 300,
             borderRadius: 2,
             background: gradient,
             border: "2px solid #e5e7eb",

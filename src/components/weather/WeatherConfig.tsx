@@ -260,8 +260,8 @@ export const WEATHER_CODE_CONFIG = {
   },
   // Snow showers
   85: {
-    rainSpeed: 1.2,
-    rainDensity: 2,
+    rainSpeed: 1.8,
+    rainDensity: 3,
     rainOpacity: 0.75,
     lightningIntensity: 0,
     lightningFrequencyMs: [5000, 10000] as [number, number],
@@ -270,8 +270,8 @@ export const WEATHER_CODE_CONFIG = {
     showLightning: false,
   },
   86: {
-    rainSpeed: 1.5,
-    rainDensity: 2.5,
+    rainSpeed: 1.8,
+    rainDensity: 3,
     rainOpacity: 0.85,
     lightningIntensity: 0,
     lightningFrequencyMs: [5000, 10000] as [number, number],
@@ -341,8 +341,7 @@ function getTimePeriod(hour: number): string {
 export const TIME_OF_DAY_GRADIENT = {
   // Clear skies
   clear_morning: {
-    background:
-      "linear-gradient(180deg, #fcd34d 0%, #fbbf24 50%, #87ceeb 100%)",
+    background: "linear-gradient(180deg, #fcd34d 0%, #fbbf24 50%, #87ceeb 100%)",
   },
   clear_late_morning: {
     background: "linear-gradient(180deg, #87ceeb 0%, #e0f6ff 100%)",
@@ -351,8 +350,7 @@ export const TIME_OF_DAY_GRADIENT = {
     background: "linear-gradient(180deg, #87ceeb 0%, #e0f6ff 100%)",
   },
   clear_sunset: {
-    background:
-      "linear-gradient(180deg, #fed7aa 0%, #fb923c 50%, #7c2d12 100%)",
+    background: "linear-gradient(180deg, #fed7aa 0%, #fb923c 50%, #7c2d12 100%)",
   },
   clear_dusk: {
     background: "linear-gradient(180deg, #5b21b6 0%, #1e1b4b 100%)",
@@ -363,8 +361,7 @@ export const TIME_OF_DAY_GRADIENT = {
 
   // Cloudy
   cloudy_morning: {
-    background:
-      "linear-gradient(180deg, #d1d5db 0%, #9ca3af 50%, #6b7280 100%)",
+    background: "linear-gradient(180deg, #d1d5db 0%, #9ca3af 50%, #6b7280 100%)",
   },
   cloudy_late_morning: {
     background: "linear-gradient(180deg, #d1d5db 0%, #9ca3af 100%)",
@@ -373,8 +370,7 @@ export const TIME_OF_DAY_GRADIENT = {
     background: "linear-gradient(180deg, #d1d5db 0%, #9ca3af 100%)",
   },
   cloudy_sunset: {
-    background:
-      "linear-gradient(180deg, #a21caf 0%, #6b21a8 50%, #3f0f63 100%)",
+    background: "linear-gradient(180deg, #a21caf 0%, #6b21a8 50%, #3f0f63 100%)",
   },
   cloudy_dusk: {
     background: "linear-gradient(180deg, #4c1d95 0%, #1e1b4b 100%)",
@@ -385,8 +381,7 @@ export const TIME_OF_DAY_GRADIENT = {
 
   // Fog
   fog_morning: {
-    background:
-      "linear-gradient(180deg, #e5e7eb 0%, #d1d5db 50%, #9ca3af 100%)",
+    background: "linear-gradient(180deg, #e5e7eb 0%, #d1d5db 50%, #9ca3af 100%)",
   },
   fog_late_morning: {
     background: "linear-gradient(180deg, #e5e7eb 0%, #d1d5db 100%)",
@@ -395,8 +390,7 @@ export const TIME_OF_DAY_GRADIENT = {
     background: "linear-gradient(180deg, #e5e7eb 0%, #d1d5db 100%)",
   },
   fog_sunset: {
-    background:
-      "linear-gradient(180deg, #b78728 0%, #78350f 50%, #451a03 100%)",
+    background: "linear-gradient(180deg, #b78728 0%, #78350f 50%, #451a03 100%)",
   },
   fog_dusk: {
     background: "linear-gradient(180deg, #3f0f63 0%, #1a0033 100%)",
@@ -407,8 +401,7 @@ export const TIME_OF_DAY_GRADIENT = {
 
   // Drizzle/Light rain
   drizzle_morning: {
-    background:
-      "linear-gradient(180deg, #bfdbfe 0%, #93c5fd 50%, #60a5fa 100%)",
+    background: "linear-gradient(180deg, #bfdbfe 0%, #93c5fd 50%, #60a5fa 100%)",
   },
   drizzle_late_morning: {
     background: "linear-gradient(180deg, #bfdbfe 0%, #93c5fd 100%)",
@@ -417,8 +410,7 @@ export const TIME_OF_DAY_GRADIENT = {
     background: "linear-gradient(180deg, #bfdbfe 0%, #93c5fd 100%)",
   },
   drizzle_sunset: {
-    background:
-      "linear-gradient(180deg, #7c3aed 0%, #5b21b6 50%, #3f0f63 100%)",
+    background: "linear-gradient(180deg, #7c3aed 0%, #5b21b6 50%, #3f0f63 100%)",
   },
   drizzle_dusk: {
     background: "linear-gradient(180deg, #4c1d95 0%, #1e1b4b 100%)",
@@ -429,8 +421,7 @@ export const TIME_OF_DAY_GRADIENT = {
 
   // Rain
   rain_morning: {
-    background:
-      "linear-gradient(180deg, #7dd3c0 0%, #5a8a7a 50%, #1e3a3a 100%)",
+    background: "linear-gradient(180deg, #7dd3c0 0%, #5a8a7a 50%, #1e3a3a 100%)",
   },
   rain_late_morning: {
     background: "linear-gradient(180deg, #94a3b8 0%, #64748b 100%)",
@@ -439,8 +430,7 @@ export const TIME_OF_DAY_GRADIENT = {
     background: "linear-gradient(180deg, #94a3b8 0%, #64748b 100%)",
   },
   rain_sunset: {
-    background:
-      "linear-gradient(180deg, #6d28d9 0%, #4c1d95 50%, #2e1065 100%)",
+    background: "linear-gradient(180deg, #6d28d9 0%, #4c1d95 50%, #2e1065 100%)",
   },
   rain_dusk: {
     background: "linear-gradient(180deg, #3f0f63 0%, #1a0033 100%)",
@@ -451,8 +441,7 @@ export const TIME_OF_DAY_GRADIENT = {
 
   // Snow
   snow_morning: {
-    background:
-      "linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 50%, #d1d5db 100%)",
+    background: "linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 50%, #d1d5db 100%)",
   },
   snow_late_morning: {
     background: "linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 100%)",
@@ -461,8 +450,7 @@ export const TIME_OF_DAY_GRADIENT = {
     background: "linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 100%)",
   },
   snow_sunset: {
-    background:
-      "linear-gradient(180deg, #c084fc 0%, #a855f7 50%, #7e22ce 100%)",
+    background: "linear-gradient(180deg, #c084fc 0%, #a855f7 50%, #7e22ce 100%)",
   },
   snow_dusk: {
     background: "linear-gradient(180deg, #6b21a8 0%, #3f0f63 100%)",
@@ -473,8 +461,7 @@ export const TIME_OF_DAY_GRADIENT = {
 
   // Thunderstorm
   thunderstorm_morning: {
-    background:
-      "linear-gradient(180deg, #4c1d95 0%, #1e1b4b 50%, #0f0a1f 100%)",
+    background: "linear-gradient(180deg, #4c1d95 0%, #1e1b4b 50%, #0f0a1f 100%)",
   },
   thunderstorm_late_morning: {
     background: "linear-gradient(180deg, #4c1d95 0%, #2e1065 100%)",
@@ -483,8 +470,7 @@ export const TIME_OF_DAY_GRADIENT = {
     background: "linear-gradient(180deg, #4c1d95 0%, #2e1065 100%)",
   },
   thunderstorm_sunset: {
-    background:
-      "linear-gradient(180deg, #5b21b6 0%, #3f0f63 50%, #1a0033 100%)",
+    background: "linear-gradient(180deg, #5b21b6 0%, #3f0f63 50%, #1a0033 100%)",
   },
   thunderstorm_dusk: {
     background: "linear-gradient(180deg, #2e1065 0%, #0f0a1f 100%)",
@@ -495,24 +481,15 @@ export const TIME_OF_DAY_GRADIENT = {
 } as const satisfies Record<string, TimeOfDayGradient>;
 
 export function getWeatherConfig(weatherCode: number): WeatherEffectConfig {
-  return (
-    WEATHER_CODE_CONFIG[weatherCode as keyof typeof WEATHER_CODE_CONFIG] ||
-    WEATHER_CODE_CONFIG[0]
-  );
+  return WEATHER_CODE_CONFIG[weatherCode as keyof typeof WEATHER_CODE_CONFIG] || WEATHER_CODE_CONFIG[0];
 }
 
-export function getBackgroundGradient(
-  hour: number,
-  weatherCode: number,
-): string {
+export function getBackgroundGradient(hour: number, weatherCode: number): string {
   const category = getWeatherCategory(weatherCode);
   const period = getTimePeriod(hour);
   const key = `${category}_${period}` as keyof typeof TIME_OF_DAY_GRADIENT;
 
-  return (
-    TIME_OF_DAY_GRADIENT[key]?.background ||
-    TIME_OF_DAY_GRADIENT.clear_night.background
-  );
+  return TIME_OF_DAY_GRADIENT[key]?.background || TIME_OF_DAY_GRADIENT.clear_night.background;
 }
 
 export function getEffectType(weatherCode: number): "rain" | "snow" | "none" {
